@@ -12,7 +12,7 @@ module.exports = async (req, res) => {
 
   try {
     var response = await fetch({
-      url: songFromID(songId),
+      url: songFromSTRING(songId),
       method: "get",
     });
     var data = unescape(response.data)[songId];
