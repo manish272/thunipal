@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
   try {
     var response = await fetch({
-      url: songFromID(req.query.id),
+      url: songFromSTRING(req.query.id),
       method: "get",
     });
     if (response.data.length === 0) throw new Error("404 - Song not found");
